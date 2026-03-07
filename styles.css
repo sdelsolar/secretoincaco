@@ -70,12 +70,13 @@ img{ width: 100%; height: auto; display:block; }
 .nav__link{
   font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
   text-decoration:none;
+  background: rgba(255,255,255,.6);
   color: var(--ink);
   font-weight: 500;
   font-size: 16px;
   padding: 8px 10px;
   border-radius: 999px;
-  border: 1px solid transparent;
+  border: 1px solid var(--line);
 }
 .nav__link:hover{
   border-color: var(--line);
@@ -84,8 +85,31 @@ img{ width: 100%; height: auto; display:block; }
 }
 .nav__link.active{
   border-color: var(--line);
-   color: var(--paper);
+  color: var(--paper);
   background: rgba(0,0,0,.75);
+}
+
+.langSwitch{
+  display: flex;
+  gap: 8px;
+  margin-left: 12px;
+}
+
+.langBtn{
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.6);
+  cursor: pointer;
+}
+
+.langBtn.active{
+  background: rgba(0,0,0,.75);
+  color: var(--paper);
+  border-color: rgba(0,0,0,.75);
 }
 
 /* SECCIONES (páginas) */
@@ -120,7 +144,7 @@ img{ width: 100%; height: auto; display:block; }
 .hero__headline{
   font-size: clamp(26px, 3.2vw, 40px);
   max-width: 720px;
-  margin-top: 10px;
+  margin-top: 0px;
 }
 
 .scrollHintBtn{

@@ -202,3 +202,99 @@ if (submitBtn) {
 }
   });
 }
+
+const translations = {
+  es: {
+    "nav.products": "Productos",
+    "nav.contact": "Contacto",
+    "hero.headline1": "Umami natural para tus comidas.",
+    "hero.headline2": "Sin MSG ni preservantes artificiales.",
+    "hero.headline3": "100% artesanal.",
+    "products.gourmetTitle": "“GOURMET GARLIC”",
+    "products.gourmetSubtitle": "Ajos finamente picados, macerados en aceite 100% girasol.",
+    "products.gourmetFhTitle": "Finas Hierbas & Sal de Maras",
+    "products.gourmetFhText1": "Ajos finamente picados y macerados en aceite 100% de girasol, perfumados con finas hierbas y un toque de sal de Maras.",
+    "products.gourmetFhText2": "El resultado es un sabor limpio y aromático, con notas herbales que realzan sin opacar. Úsalo para darle un toque gourmet a tus comidas. Ideal para pescados, aves y vegetales.",
+    "products.gourmetHongoTitle": "Hongos & Laurel",
+    "products.gourmetHongoText": "Ajos finamente picados y macerados en aceite 100% de girasol, con hongos secos y hojas de laurel que aportan profundidad y un aroma cálido. Un perfil intenso y terroso, perfecto para darle cuerpo y carácter a risottos, sopas y platos al horno.",
+    "products.gourmetAjiTitle": "Ají Amarillo & Paprika",
+    "products.gourmetAjiText1": "Ajos finamente picados y macerados en aceite 100% de girasol, con ají amarillo y hojuelas de paprika ahumada.",
+    "products.gourmetAjiText2": "Un sabor intenso y equilibrado, ideal para realzar carnes, pastas y guisos con un toque de umami y calidez.",
+    "products.gourmetZapalloTitle": "Zapallo Loche & Culantro*",
+    "products.gourmetZapalloText": "Ajos finamente picados y macerados en aceite 100% de girasol, con zapallo loche rallado y toques de culantro. Cremoso, aromático y con ese sabor norteño inconfundible, perfecto para darle carácter a cualquier plato típico del norte del Perú.",
+    "products.gourmetZapalloNote": "*PRÓXIMAMENTE",
+    "products.gourmetChilliTitle": "Chilli Oil Peruano",
+    "products.gourmetChilliText1": "Creado con pasión y dedicación, este garlic chili oil tiene el balance perfecto entre el mundo oriental y el criollo. Agrega el picante perfecto y resalta los sabores naturales de tus comidas.",
+    "products.gourmetChilliText2": "Ingredientes: Ajos, ajíes & cebollas (confitados a fuego lento), aceite de ajonjolí, hojuelas de paprika, hongos secos, pecanas, nueces, finas hierbas, sal de maras y más.",
+    "contact.title": "CONTÁCTANOS",
+    "contact.subtitle": "Ventas al por mayor y menor.",
+    "contact.text": "Escanea el QR para abrir el perfil.",
+    "contact.instagram": "Instagram",
+    "contact.form": "Formulario",
+    "form.name": "Nombre",
+    "form.email": "Email",
+    "form.subject": "Asunto",
+    "form.message": "Mensaje",
+    "form.send": "Enviar"
+  },
+  en: {
+    "nav.products": "Products",
+    "nav.contact": "Contact",
+    "hero.headline1": "Natural umami for your meals.",
+    "hero.headline2": "No MSG or artificial preservatives.",
+    "hero.headline3": "100% Artisan-made.",
+
+    "products.gourmetTitle": "“GOURMET GARLIC”",
+    "products.gourmetSubtitle": "Finely chopped garlic, macerated in 100% sunflower oil.",
+    "products.gourmetFhTitle": "Fine Herbs & Maras Salt",
+    "products.gourmetFhText1": "Finely chopped garlic, slowly infused in 100% sunflower oil, delicately scented with fine herbs and a touch of Maras salt.",
+    "products.gourmetFhText2": "This result in a clean and aromatic flavor, with herbal notes that enhance your meals without overpowering. Perfect for adding a gourmet touch to fish, poultry, and vegetables.",
+    "products.gourmetHongoTitle": "Mushrooms & Bay Leaf",
+    "products.gourmetHongoText": "Finely chopped garlic, slowly infused in 100% sunflower oil with dried mushrooms and bay leaves to add depth and a warm aroma to your meals with an intense, earthy profile. Perfect for adding body and character to risottos, soups, and oven-baked dishes.",
+    "products.gourmetAjiTitle": "Ají Amarillo & Paprika",
+    "products.gourmetAjiText1": "Finely chopped garlic, slowly infused in 100% sunflower oil with ají amarillo (Peruvian Yellow Pepper) and smoked paprika flakes.",
+    "products.gourmetAjiText2": "An intense and balanced flavor. Ideal for elevating meats, pastas, and stews with a spicy touch of umami and warmth.",
+    "products.gourmetZapalloTitle": "Peruvian Loche Squash & Culantro*",
+    "products.gourmetZapalloText": "Finely chopped garlic, slowly infused in 100% sunflower oil with grated Peruvian Loche squash and hints of culantro. Creamy and aromatic, with that unmistakable northern Peruvian flavor. Perfect for adding depth and character to classic dishes from Peru’s north coast.",
+    "products.gourmetZapalloNote": "*AVAILABLE SOON",
+    "products.gourmetChilliTitle": "Peruvian Chilli Oil",
+    "products.gourmetChilliText1": "Crafted with passion and care, this garlic chili oil strikes the perfect balance between Eastern flavors and Peruvian tradition. It adds just the right heat and brings out the natural flavors of your meals.",
+    "products.gourmetChilliText2": "Ingredients: Garlic, peppers & onions (slow-cooked), sesame oil, paprika flakes, dried mushrooms, pecans, walnuts, fine herbs, Maras salt, and more.",
+    "contact.title": "CONTACT US",
+    "contact.subtitle": "Wholesale and retail sales.",
+    "contact.instagram": "Instagram",
+    "contact.text": "Scan the QR code to open the profile.",
+
+    "contact.form": "Contact form",
+    "form.name": "Name",
+    "form.email": "Email",
+    "form.subject": "Subject",
+    "form.message": "Message",
+    "form.send": "Send"
+  }
+};
+
+function setLanguage(lang) {
+  const dict = translations[lang] || translations.es;
+
+  document.querySelectorAll("[data-i18n]").forEach((el) => {
+    const key = el.getAttribute("data-i18n");
+    if (!key) return;
+    if (dict[key] !== undefined) el.textContent = dict[key];
+  });
+
+  // Update active button UI
+  document.getElementById("langEs")?.classList.toggle("active", lang === "es");
+  document.getElementById("langEn")?.classList.toggle("active", lang === "en");
+
+  // Persist choice
+  localStorage.setItem("lang", lang);
+}
+
+// Hook buttons
+document.getElementById("langEs")?.addEventListener("click", () => setLanguage("es"));
+document.getElementById("langEn")?.addEventListener("click", () => setLanguage("en"));
+
+// On load: use saved language or default Spanish
+const savedLang = localStorage.getItem("lang") || "es";
+setLanguage(savedLang);

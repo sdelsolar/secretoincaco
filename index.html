@@ -30,20 +30,26 @@
       <a class="nav__brand" href="#portada" aria-label="Secreto Inca Co."><img src="assets/logo.png" alt="Secreto Inca Co." class="nav__logo" /></a>
 
       <div class="nav__links">
-        <a class="nav__link" href="#productos">Productos</a>
-        <a class="nav__link" href="#contacto">Contacto</a>
+        <a class="nav__link" href="#productos" data-i18n="nav.products">Productos</a>
+        <a class="nav__link" href="#contacto" data-i18n="nav.contact">Contacto</a>
+      </div>
+      <div class="langSwitch">
+        <button class="langBtn" id="langEs" type="button">ES</button>
+        <button class="langBtn" id="langEn" type="button">EN</button>
       </div>
     </div>
   </nav>
 
   <main>
-    <!-- 1) PORTADA -->
+  <!-- 1) PORTADA -->
     <section id="portada" class="page page--hero">
       <div class="container hero">
         <img class="hero__logo reveal" src="assets/hero.png" alt="Secreto Inca Co." />
-        <h1 class="hero__headline reveal">
-          Umami natural para tus comidas. Sin MSG ni preservantes artificiales. 100% artesanal.
-        </h1>
+        
+        <h1 class="hero__headline reveal" data-i18n="hero.headline1">Umami natural para tus comidas.</h1>
+        <h1 class="hero__headline reveal" data-i18n="hero.headline2">Sin MSG ni preservantes artificiales.</h1>
+        <h1 class="hero__headline reveal" data-i18n="hero.headline3">100% artesanal.</h1>
+
         <button class="scrollHintBtn" id="scrollHintBtn" aria-label="Ir a productos" type="button">↓</button>
       </div>
     </section>
@@ -52,8 +58,8 @@
     <section id="productos" class="page page--products">
       <div class="container">
         <div class="blockTitle reveal">
-          <h3>“GOURMET GARLIC”</h3>
-          <p class="muted">Ajos finamente picados, macerados en aceite 100% girasol.</p>
+          <h3 data-i18n="products.gourmetTitle">“GOURMET GARLIC”</h3>
+          <p class="muted" data-i18n="products.gourmetSubtitle">Ajos finamente picados, macerados en aceite 100% girasol.</p>
         </div>
 
         <!-- Finas Hierbas: imagen izq / texto der -->
@@ -62,11 +68,11 @@
             <img src="assets/finas-hierbas.jpg" alt="Finas Hierbas & Sal de Maras" />
           </div>
           <div class="split__text">
-            <h4>Finas Hierbas & Sal de Maras</h4>
-            <p class="muted">
+            <h4 data-i18n="products.gourmetFhTitle">Finas Hierbas & Sal de Maras</h4>
+            <p class="muted" data-i18n="products.gourmetFhText1">
               Ajos finamente picados y macerados en aceite 100% de girasol, perfumados con finas hierbas y un toque de sal de Maras. 
             </p>
-            <p class="muted">El resultado es un sabor limpio y aromático, con notas herbales que realzan sin opacar. Úsalo para darle un toque gourmet a tus comidas. Ideal para pescados, aves y vegetales.</p>
+            <p class="muted" data-i18n="products.gourmetFhText2">El resultado es un sabor limpio y aromático, con notas herbales que realzan sin opacar. Úsalo para darle un toque gourmet a tus comidas. Ideal para pescados, aves y vegetales.</p>
             <img class="adorno reveal" src="assets/deco_romero.png" alt="Romero">
           </div>
         </article>
@@ -77,8 +83,8 @@
             <img src="assets/hongos-laurel.jpg" alt="Hongos & Laurel" />
           </div>
           <div class="split__text">
-            <h4>Hongos & Laurel</h4>
-            <p class="muted">
+            <h4 data-i18n="products.gourmetHongoTitle">Hongos & Laurel</h4>
+            <p class="muted" data-i18n="products.gourmetHongoText">
               Ajos finamente picados y macerados en aceite 100% de girasol, con hongos secos y hojas de laurel que aportan profundidad y un aroma cálido. Un perfil intenso y terroso, perfecto para darle cuerpo y carácter a risottos, sopas y platos al horno.
             </p>
             <img class="adorno reveal" src="assets/deco_hongo.png" alt="Hongo & Laurel">
@@ -91,10 +97,10 @@
             <img src="assets/aji-paprika.jpg" alt="Ají Amarillo & Paprika" />
           </div>
           <div class="split__text">
-            <h4>Ají Amarillo & Paprika</h4>
-            <p class="muted">
+            <h4 data-i18n="products.gourmetAjiTitle">Ají Amarillo & Paprika</h4>
+            <p class="muted" data-i18n="products.gourmetAjiText1">
               Ajos finamente picados y macerados en aceite 100% de girasol, con ají amarillo y hojuelas de paprika ahumada.</p>
-            <p class="muted">Un sabor intenso y equilibrado, ideal para realzar carnes, pastas y guisos con un toque de umami y calidez.</p>  
+            <p class="muted" data-i18n="products.gourmetAjiText2">Un sabor intenso y equilibrado, ideal para realzar carnes, pastas y guisos con un toque de umami y calidez.</p>  
             <img class="adorno reveal" src="assets/deco_aji.png" alt="Ají Amarillo & Paprika">
           </div>
         </article>
@@ -105,12 +111,12 @@
             <img src="assets/zapallo-culantro.jpg" alt="Zapallo Loche & Culantro" />
           </div>
           <div class="split__text">
-            <h4>Zapallo Loche & Culantro*</h4>
-            <p class="muted">
+            <h4 data-i18n="products.gourmetZapalloTitle">Zapallo Loche & Culantro*</h4>
+            <p class="muted" data-i18n="products.gourmetZapalloText">
               Ajos finamente picados y macerados en aceite 100% de girasol, con zapallo loche rallado y toques de culantro. Cremoso, aromático y con ese sabor norteño inconfundible, perfecto para darle carácter a cualquier plato típico del norte del Perú.
             </p>
             <img class="adorno reveal" src="assets/deco_ajo.png" alt="Zapallo Loche & Culantro">
-            <p class="muted">*PRÓXIMAMENTE</p>
+            <p class="muted" data-i18n="products.gourmetZapalloNote">*PRÓXIMAMENTE</p>
           </div>
         </article>
 
@@ -124,12 +130,12 @@
             <img src="assets/chili-oil.jpg" alt="Garlic Chili Oil" />
           </div>
           <div class="split__text">
-            <h4 class="subhead">Chilli Oil Peruano</h4>
-            <p class="muted">
+            <h4 class="subhead" data-i18n="products.gourmetChilliTitle">Chilli Oil Peruano</h4>
+            <p class="muted" data-i18n="products.gourmetChilliText1">
               Creado con pasión y dedicación, este garlic chili oil tiene el balance perfecto entre el mundo oriental y el criollo.
               Agrega el picante perfecto y resalta los sabores naturales de tus comidas.
             </p>
-            <p class="muted">
+            <p class="muted" data-i18n="products.gourmetChilliText2">
               Ingredientes: Ajos, ajíes & cebollas (confitados a fuego lento), aceite de ajonjolí, hojuelas de paprika,
               hongos secos, pecanas, nueces, finas hierbas, sal de maras y más.
             </p>
@@ -142,8 +148,8 @@
     <section id="contacto" class="page">
       <div class="container">
         <div class="section__title">
-          <h2>CONTÁCTANOS</h2>
-          <p class="muted">Ventas al por mayor y menor.</p>
+          <h2 data-i18n="contact.title">CONTÁCTANOS</h2>
+          <p class="muted" data-i18n="contact.subtitle">Ventas al por mayor y menor.</p>
         </div>
 
         <div class="contact2">
@@ -151,7 +157,7 @@
           <div class="contact2__left reveal">
             <h3>Instagram: <a class="igLink" href="https://instagram.com/secretoincaco.pe" target="_blank" rel="noopener">@secretoincaco.pe</a></h3>
             
-            <p class="muted small">Escanea el QR para abrir el perfil.</p>
+            <p class="muted small" data-i18n="contact.text">Escanea el QR para abrir el perfil.</p>
           <div class="qrFrame">
             <img src="assets/qr-instagram.png" alt="QR Instagram Secreto Inca Co." class="qrImg">
           </div>
@@ -159,25 +165,25 @@
 
           <!-- Derecha: Formulario -->
           <div class="contact2__right reveal">
-            <h3>Formulario</h3>
+            <h3 data-i18n="contact.form">Formulario</h3>
             <form id="contactForm" class="form">
               <div class="formRow">
-                <label for="name">Nombre</label>
+                <label for="name" data-i18n="form.name">Nombre</label>
                 <input id="name" name="name" type="text" required autocomplete="name" />
               </div>
               <div class="formRow">
-                <label for="email">Email</label>
+                <label for="email" data-i18n="form.email">Email</label>
                 <input id="email" name="email" type="email" required autocomplete="email" />
               </div>
               <div class="formRow">
-                <label for="subject">Asunto</label>
+                <label for="subject" data-i18n="form.subject">Asunto</label>
                 <input id="subject" name="subject" type="text" required />
               </div>
               <div class="formRow formRow--textarea">
-                <label for="message">Mensaje</label>
+                <label for="message" data-i18n="form.message">Mensaje</label>
                 <textarea id="message" name="message" rows="5" required></textarea>
               </div>
-              <button class="btn btn--primary" type="submit">Enviar</button>
+              <button class="btn btn--primary" type="submit" data-i18n="form.send">Enviar</button>
               <p id="formStatus" class="muted small"></p>
             </form>
           </div>
