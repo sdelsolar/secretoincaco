@@ -287,6 +287,10 @@ function setLanguage(lang) {
   document.getElementById("langEs")?.classList.toggle("active", lang === "es");
   document.getElementById("langEn")?.classList.toggle("active", lang === "en");
 
+  // Mobile menu items
+  document.getElementById("langMenuEs")?.classList.toggle("active", lang === "es");
+  document.getElementById("langMenuEn")?.classList.toggle("active", lang === "en");
+
   // Persist choice
   localStorage.setItem("lang", lang);
 }
@@ -298,3 +302,47 @@ document.getElementById("langEn")?.addEventListener("click", () => setLanguage("
 // On load: use saved language or default Spanish
 const savedLang = localStorage.getItem("lang") || "es";
 setLanguage(savedLang);
+
+const globeBtn = document.getElementById("langGlobe");
+const langMenu = document.getElementById("langMenu");
+const menuEs = document.getElementById("langMenuEs");
+const menuEn = document.getElementById("langMenuEn");
+
+function openLangMenu(){
+  if (!langMenu) return;
+  langMenu.classList.add("is-open");
+  langMenu.setAttribute("aria-hidden", "false");
+}
+function closeLangMenu(){
+  if (!langMenu) return;
+  langMenu.classList.remove("is-open");
+  langMenu.setAttribute("aria-hidden", "true");
+}
+
+globeBtn?.addEventListener("click", (e) => {
+  e.stopPropagation();
+  if (!langMenu) return;
+  const isOpen = langMenu.classList.contains("is-open");
+  if (isOpen) closeLangMenu();
+  else openLangMenu();
+});
+
+menuEs?.addEventListener("click", () => {
+  setLanguage("es");
+  closeLangMenu();
+});
+menuEn?.addEventListener("click", () => {
+  setLanguage("en");
+  closeLangMenu();
+});
+
+/* Close if user clicks anywhere else */
+document.addEventListener("click", () => {
+  closeLangMenu();
+});
+
+/* Close on Escape */
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeLangMenu();
+});
+
